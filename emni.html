@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/emni.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+          <img src="./images/8161 1.png" class="slide" />
+          <img src="./images/a0512a1d6a17714735ad2613ff8c9128 1.png" class="slide" />
+          <img src="./images/banner.png" class="slide" />
+        </div>
+      </div>
+
+
+      <script>
+        const slides = document.querySelector(".slides");
+        const totalSlides = document.querySelectorAll(".slide").length;
+      
+        let index = 0;
+      
+        setInterval(() => {
+          index++;
+          if (index >= totalSlides) {
+            index = 0;
+          }
+          slides.style.transform = `translateX(-${index * 600}px)`;
+        }, 2000); // changes every 3 seconds
+      </script>
+</body>
+</html>
